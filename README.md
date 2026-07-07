@@ -41,7 +41,7 @@ And this is the page photo
 
 
 1- Login 
-![login_screen](assets/login_screen.png)
+![login_screen](assets/login_screen.jpg)
 
 
 
@@ -51,7 +51,7 @@ And this is the page photo
 
 
 2- register
-![register_screen](assets/register_screen.png)
+![register_screen](assets/register_screen.jpg)
 
 .
 
