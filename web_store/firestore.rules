@@ -1,0 +1,17 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Products are readable by anyone, but not writable by clients
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if false; // Only written via seeder or admin
+    }
+
+    // Users can only read and write their own favorites
+    match /users/{userId}/favorites/{favoriteId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}
